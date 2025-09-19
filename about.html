@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkySet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+  <img src="..." loading="lazy" />
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
+
+    <!-- LEFT: Logo -->
+    <div class="logo">
+      <a href="about.html" aria-label="SkySet Home">SkySet</a>
+    </div>
+
+    <!-- CENTER: Desktop navigation -->
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="product.html">Products</a>
+      <a href="history.html">Our story</a>
+      <a href="blog.html">Blog</a>
+      <a href="sustainability.html">Sustainability</a>
+
+    </nav>
+
+    <!-- RIGHT: Desktop CTA + Hamburger -->
+    <div class="right-area">
+      <a class="btn-primary desktop-only" href="contact.html">Contact Us</a>
+      <button 
+        class="hamburger" 
+        id="hamburger" 
+        aria-label="Toggle Menu" 
+        aria-expanded="false" 
+        aria-controls="mobileMenu">
+        <span class="bar"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- MOBILE MENU (hidden by default) -->
+  <aside id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile Navigation">
+     <a href="product.html" onclick="closeMobile()">Products</a>
+      <a href="history.html" onclick="closeMobile()">History</a>
+      <a href="sustainability.html" onclick="closeMobile()">Sustainability</a>
+      <a href="blog.html" onclick="closeMobile()">Blog</a>
+      <a href="contact.html" onclick="closeMobile()">Contact</a>
+    </nav>
+    <div class="mobile-cta">
+      <a class="btn-primary" href="#request">Leave Request</a>
+    </div>
+  </aside>
+</header>
+<!-- ================= END HEADER ================= -->
+
+<!-- Hero Carousel -->
+<section class="hero-carousel">
+  <div class="slides active">
+    <img src="https://www.pixelstalk.net/wp-content/uploads/images5/4K-Plane-Wallpaper-for-Desktop.jpg" alt="Slide 1" />
+  </div>
+</section>
+
+
+<!-- new collection-->>
+<section class="products-big">
+  <h2 class="section-title">NEW COLLECTION</h2>
+  <h1 class="section-subtitle">LUX BLAZER</h1>
+
+  <div class="product-row">
+    <!-- Card 1 -->
+<div class="product-card hidden">
+  <div class="image-wrapper">
+    <img src="https://amenitiesmagazine.com/wp-content/uploads/2025/04/BU240923A_Eva_04-1024x882.jpeg" alt="Amethyst Blazer" class="main-img">
+    <img src="https://businesstravelerusa.com/wp-content/uploads/2023/11/Eva-X-Armani-1-1024x768.jpg" alt="Amethyst Blazer alt" class="hover-img">
+    <div class="corner-icons">
+      <span class="corner top-left"></span>
+      <span class="corner top-right"></span>
+      <span class="corner bottom-left"></span>
+      <span class="corner bottom-right"></span>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3>Amethyst Blazer</h3>
+    <p>Lux Blazer</p>
+    <div class="more-info">
+       <a href="product.html" class="card-btn">more</a>
+    </div>
+  </div>
+</div>
+
+    <!-- Card 2 -->
+    <div class="product-card hidden">
+      <div class="image-wrapper">
+        <img src="https://amenitiesmagazine.com/wp-content/uploads/2023/11/Jason-Wu-Sleepwear-for-EVA-Air.-Image-Credit-BUZZ.jpeg" alt="Beige Blazer" class="main-img">
+        <img src="https://businesstravelerusa.com/wp-content/uploads/2023/11/EVA-Air-Pajamas-3-907x1024.webp" alt="Beige Blazer alt" class="hover-img">
+        <img src="https://amenitiesmagazine.com/wp-content/uploads/2023/11/Jason-Wu-Sleepwear-for-EVA-Air.-Image-Credit-BUZZ-a.jpeg" alt="Beige Blazer alt" class="hover-img">
+        <div class="corner-icons">
+          <span class="corner top-left"></span>
+          <span class="corner top-right"></span>
+          <span class="corner bottom-left"></span>
+          <span class="corner bottom-right"></span>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3>Beige Blazer</h3>
+        <p>Lux Blazer</p>
+        <div class="price">
+          <span class="current">$129,00</span>
+          <span class="old">$149,00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="product-card hidden">
+      <div class="image-wrapper">
+        <img src="https://awards.onboardhospitality.com/wp-content/uploads/2024/01/1-3.jpg" alt="Ebony Blazer" class="main-img">
+        <img src="https://awards.onboardhospitality.com/wp-content/uploads/2025/01/BU240930A_130.jpeg" alt="Ebony Blazer alt" class="hover-img">
+        <div class="corner-icons">
+          <span class="corner top-left"></span>
+          <span class="corner top-right"></span>
+          <span class="corner bottom-left"></span>
+          <span class="corner bottom-right"></span>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3>Ebony Blazer</h3>
+        <p>Lux Blazer</p>
+        <div class="price">
+          <span class="current">$129,00</span>
+          <span class="old">$149,00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="container section hidden">
+    <h2 class="section-title">Our Collection</h2>
+<p>Discover our meticulously crafted collection — where elegance meets function.
+From luxury in-flight amenity kits to expertly tailored uniforms, every piece is designed with precision and purpose.
+Whether for airlines, hotels, railways or corporate teams, we deliver solutions that elevate the experience.
+Our versatile range includes custom-made polos, professional uniforms, comfort sets, and personal care accessories.
+SkySet’s collection goes beyond aesthetics — it’s built for performance, prestige, and enduring quality.
+
+</p>
+</section>
+<!-- About Section -->
+<section id="about" class="container section hidden">
+  <h2>About Us</h2>
+  <p>SkySet is a leading textile solutions provider in Uzbekistan, delivering premium products to major enterprises and nationwide markets.
+We specialize in high-quality aviation kits and uniforms, offering full-service production for airlines, hotels, trains, cruises, and more.
+From bespoke uniforms to polo shirts, toothbrushes, pastes, slippers, and personal care accessories — we cover every detail.
+Our versatile manufacturing allows us to design and deliver tailor-made collections for any industry or need.
+SkySet is your trusted partner in crafting comfort, professionalism, and luxury — wherever your journey begins.</p>
+</section>
+<section class="main-showcase">
+  <div class="showcase-grid">
+    
+    <!-- Katta kategoriya (chap tarafda) -->
+    <div class="showcase-item showcase-large" style="background-image: url('images/kids-set.jpg');">
+               <img src="https://s.alicdn.com/@sc04/kf/H784bf86002844af6bd31bce10526b445z/Hot-Selling-Luxury-Hotel-Guest-Amenities-Set-Customized-100-Eco-Friendly-Hotel-Amenities-Supply.jpg_300x300.jpg" alt="Yotoq choyshabi">
+
+      <div class="overlay dark">
+        <h2>Bolalar to‘plami</h2>
+        <a href="#" class="btn">KATALOGNI KO‘RISH</a>
+      </div>
+    </div>
+
+    <!-- Kichik kategoriya 1 -->
+    <div class="showcase-item showcase-small">
+      <img src="https://amenitiesmagazine.com/wp-content/uploads/2025/05/deltaamenitiesrefresh_5-1-1024x682.jpg" alt="Yotoq choyshabi">
+      <div class="overlay">
+        <h3>Yotoq choyshablari</h3>
+        <p>Sifatli tanlov</p>
+        <a href="#" class="btn-outline">KATALOG</a>
+      </div>
+    </div>
+
+    <!-- Kichik kategoriya 2 -->
+    <div class="showcase-item showcase-small">
+      <img src="https://amenitiesmagazine.com/wp-content/uploads/2025/05/deltaamenitiesrefresh_4-1024x682.jpg" alt="Yangi kolleksiya">
+      <div class="overlay">
+        <h3>Yangi kolleksiya</h3>
+        <a href="#" class="btn-outline">KO‘RISH</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- coustamers -->
+<section class="testimonials">
+  <div class="container">
+    <h2 class="fade-up">WHAT OUR CUSTOMERS SAID</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial fade-section hidden">
+        <div class="stars">★★★★★</div>
+        <p>“The quality of the fabric and the attention to detail blew me away. 
+        I feel confident and stylish every time I wear their clothes!”</p>
+        <span>- Samantha Luna</span>
+      </div>
+      <div class="testimonial fade-section hidden">
+        <div class="stars">★★★★★</div>
+        <p>“Finally, a brand that combines comfort and elegance! Their pieces fit 
+        like they were custom-made just for me.”</p>
+        <span>- James Knight</span>
+      </div>
+      <div class="testimonial fade-section hidden">
+        <div class="stars">★★★★★</div>
+        <p>“I’ve never received so many compliments on my outfits! 
+        This brand truly knows how to create timeless designs.”</p>
+        <span>- Nina Roscoe</span>
+      </div>
+      <div class="testimonial fade-section hidden">
+        <div class="stars">★★★★★</div>
+        <p>“This brand is everything I’ve been looking for—stylish and high-quality. 
+        Their collection is the perfect mix of modern trends and classic staples.”</p>
+        <span>- Daniel Moonlight</span>
+      </div>
+      <div class="testimonial fade-section hidden">
+        <div class="stars">★★★★★</div>
+        <p>“I’m so impressed by how this brand combines sustainability with fashion. 
+        It makes me feel good about supporting them.”</p>
+        <span>- Emma Stone</span>
+      </div>
+      <div class="testimonial fade-section hidden">
+        <div class="stars">★★★★★</div>
+        <p>“I absolutely love how versatile their pieces are. I can dress them up or 
+        keep them casual, and it always works perfectly.”</p>
+        <span>- Alex Washington</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+<!-- Home pagega (index.html) qo‘shiladi -->
+<section class="history-highlight">
+  <div class="container history-container">
+    <div class="history-left">
+      <img src="https://images.squarespace-cdn.com/content/v1/543814b1e4b0be6645f43eef/1595013234450-FYU12AR4JZRPSLLNH4C3/iStock-174950853.jpg?format=1500w" alt="Our History" />
+      <div class="years-label">12 <span>Years</span></div>
+    </div>
+    <div class="history-right">
+      <h2>We have a proud history!</h2>
+      <p>From humble beginnings to global impact, SkySet has grown into a leader in airline textile solutions. Discover how our journey shaped the future of comfort.</p>
+      <a href="history.html" class="history-btn">Explore Our History →</a>
+    </div>
+  </div>
+</section>
+<hr class="section-divider fade-section hidden" />
+
+    <!-- partners -->
+<section class="partners-carousel">
+  <div class="partner-track">
+    <div class="partner-logo"><img src="https://edu.fermermaktab.uz/assets/logo-ByOuUOLs.svg" alt="Delta"></div>
+    <div class="partner-logo"><img src="https://api.logobank.uz/media/logos_png/UzAuto-01.png" alt="UzAuto"></div>
+    <div class="partner-logo"><img src="https://wp.logos-download.com/wp-content/uploads/2023/02/Uzbekistan_Airways_Logo.png?dl" alt="Uzbekistan Airways"></div>
+    <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Mobiuz.svg/2560px-Mobiuz.svg.png" alt="Mobiuz"></div>
+    <div class="partner-logo"><img src="https://uzathletics.uz/t/v46/images/uzathleticslogo-2020.png" alt="Uz Athletics"></div>
+    <div class="partner-logo"><img src="https://nationalprcenter.uz/wp-content/uploads/2024/04/logo-uzbekturizm_last-version-1920x681.png" alt="Uzbek Tourism"></div>
+    <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Agrobank_Logo.svg/2560px-Agrobank_Logo.svg.png" alt="Agrobank"></div>
+    <div class="partner-logo"><img src="https://railway.uz/local/templates/main_v2/img/logo.png" alt="Uz Railway"></div>
+    <!-- Dublikat seamless uchun -->
+    <div class="partner-logo"><img src="https://edu.fermermaktab.uz/assets/logo-ByOuUOLs.svg" alt="Delta"></div>
+    <div class="partner-logo"><img src="https://api.logobank.uz/media/logos_png/UzAuto-01.png" alt="UzAuto"></div>
+    <div class="partner-logo"><img src="https://wp.logos-download.com/wp-content/uploads/2023/02/Uzbekistan_Airways_Logo.png?dl" alt="Uzbekistan Airways"></div>
+    <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Mobiuz.svg/2560px-Mobiuz.svg.png" alt="Mobiuz"></div>
+  </div>
+</section>
+<!-- Minimalistic Wide Footer -->
+<footer class="batavia-footer">
+  <div class="batavia-footer-top">
+    <div class="footer-col">
+      <span class="footer-title">SHOP</span>
+      <ul>
+        <li>Catalog</li>
+        <li>Lux Blazer</li>
+        <li>One Piece</li>
+        <li>Batavia Essentials</li>
+        <li>Mens</li>
+        <li>Womens</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <span class="footer-title">NAVIGATION</span>
+      <ul>
+        <li>Home</li>
+        <li>Our Story</li>
+        <li>Blog</li>
+        <li>Contact</li>
+        <li>Privacy Policy</li>
+        <li>404</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <span class="footer-title">SOCIAL</span>
+      <ul>
+        <li>X (Twitter)</li>
+        <li>Instagram</li>
+        <li>TikTok</li>
+        <li>YouTube</li>
+        <li>Facebook</li>
+      </ul>
+    </div>
+    <div class="footer-col subscribe-col">
+      <span class="footer-title">SUBSCRIBE TO NEWSLETTER</span>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your Email" />
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+    </div>
+  </div>
+  <div class="batavia-footer-bottom">
+    <div class="footer-copy">Copyright 2025, SkySet</div>
+    <div class="footer-madeby">Made by SS Group.</div>
+  </div>
+  <div class="batavia-footer-brand">SKYSET</div>
+</footer>
+<!-- Scripts -->
+<script src="about.js"></script>
+<script>
+  // Scroll navbar change
+  window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+
+    if (window.scrollY > 10) {
+      nav.classList.add('scrolled');
+      nav.classList.remove('transparent');
+    } else {
+      nav.classList.add('transparent');
+      nav.classList.remove('scrolled');
+    }
+  });
+
+  // Update footer year
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+

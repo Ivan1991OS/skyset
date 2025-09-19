@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkySet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+  <img src="..." loading="lazy" />
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
+
+    <!-- LEFT: Logo -->
+    <div class="logo">
+      <a href="about.html" aria-label="SkySet Home">SkySet</a>
+    </div>
+
+    <!-- CENTER: Desktop navigation -->
+    <nav class="nav-links" aria-label="Main Navigation">
+     <a href="product.html" onclick="closeMobile()">Products</a>
+      <a href="history.html" onclick="closeMobile()">History</a>
+      <a href="sustainability.html" onclick="closeMobile()">Sustainability</a>
+      <a href="blog.html" onclick="closeMobile()">Blog</a>
+      <a href="contact.html" onclick="closeMobile()">Contact</a>
+    </nav>
+
+    <!-- RIGHT: Desktop CTA + Hamburger -->
+    <div class="right-area">
+      <a class="btn-primary desktop-only" href="contact.html">Contact Us</a>
+      <button 
+        class="hamburger" 
+        id="hamburger" 
+        aria-label="Toggle Menu" 
+        aria-expanded="false" 
+        aria-controls="mobileMenu">
+        <span class="bar"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- MOBILE MENU (hidden by default) -->
+  <aside id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile Navigation">
+      <a href="product.html" onclick="closeMobile()">Products</a>
+      <a href="history.html" onclick="closeMobile()">History</a>
+      <a href="blog.html" onclick="closeMobile()">Blog</a>
+      <a href="sustainability.html" onclick="closeMobile()">Sustainability</a>
+      <a href="contact.html" onclick="closeMobile()">Contact</a>
+    </nav>
+    <div class="mobile-cta">
+      <a class="btn-primary" href="#request">Leave Request</a>
+    </div>
+  </aside>
+</header>
+<!-- ================= END HEADER ================= -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Minimalistic Wide Footer -->
+<footer class="batavia-footer">
+  <div class="batavia-footer-top">
+    <div class="footer-col">
+      <span class="footer-title">SHOP</span>
+      <ul>
+        <li>Catalog</li>
+        <li>Lux Blazer</li>
+        <li>One Piece</li>
+        <li>Batavia Essentials</li>
+        <li>Mens</li>
+        <li>Womens</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <span class="footer-title">NAVIGATION</span>
+      <ul>
+        <li>Home</li>
+        <li>Our Story</li>
+        <li>Blog</li>
+        <li>Contact</li>
+        <li>Privacy Policy</li>
+        <li>404</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <span class="footer-title">SOCIAL</span>
+      <ul>
+        <li>X (Twitter)</li>
+        <li>Instagram</li>
+        <li>TikTok</li>
+        <li>YouTube</li>
+        <li>Facebook</li>
+      </ul>
+    </div>
+    <div class="footer-col subscribe-col">
+      <span class="footer-title">SUBSCRIBE TO NEWSLETTER</span>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your Email" />
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+    </div>
+  </div>
+  <div class="batavia-footer-bottom">
+    <div class="footer-copy">Copyright 2025, SkySet</div>
+    <div class="footer-madeby">Made by SS Group.</div>
+  </div>
+  <div class="batavia-footer-brand">SKYSET</div>
+</footer>
+<!-- Scripts -->
+<script src="about.js"></script>
+<script>
+  // Scroll navbar change
+  window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+
+    if (window.scrollY > 10) {
+      nav.classList.add('scrolled');
+      nav.classList.remove('transparent');
+    } else {
+      nav.classList.add('transparent');
+      nav.classList.remove('scrolled');
+    }
+  });
+
+  // Update footer year
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+

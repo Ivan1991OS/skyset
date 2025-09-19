@@ -1,0 +1,344 @@
+/* === Global Reset === */
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+main { padding-top: calc(var(--nav-height) + 40px); }
+
+
+/* === ROOT VARIABLES (qulay sozlash uchun) === */
+:root {
+  --nav-height: 72px;
+  --color-bg: rgba(255, 255, 255, 0.82);
+  --color-bg-scrolled: rgba(245, 245, 245, 0.95);
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-border-strong: rgba(0, 0, 0, 0.12);
+  --color-text: #222;
+  --color-text-hover: #000;
+  --color-primary: #111;
+  --color-primary-hover: #000;
+  --shadow-nav: 0 4px 12px rgba(0,0,0,0.04);
+  --radius-btn: 8px;
+  --transition-fast: 0.25s ease;
+  --transition-medium: 0.35s ease;
+}
+
+/* === HEADER BASE === */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-height);
+  background: var(--color-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px); /* Safari fix */
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-nav);
+  z-index: 1000;
+  transition: background var(--transition-medium), 
+              border-color var(--transition-medium), 
+              box-shadow var(--transition-medium);
+}
+.site-header.scrolled {
+  background: var(--color-bg-scrolled);
+  border-bottom-color: var(--color-border-strong);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* === LOGO === */
+.logo a {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text);
+  letter-spacing: -0.6px;
+  transition: color var(--transition-fast);
+}
+.logo a:hover { color: var(--color-text-hover); }
+
+/* === NAVIGATION (Desktop) === */
+.nav-links {
+  display: flex;
+  gap: 36px;
+}
+.nav-links a {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+.nav-links a:hover { color: var(--color-text-hover); }
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -6px;
+  width: 0; height: 2px;
+  background: var(--color-text-hover);
+  transition: width var(--transition-fast);
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* === CTA BUTTON === */
+.btn-primary {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  transition: background var(--transition-fast), 
+              transform var(--transition-fast), 
+              box-shadow var(--transition-fast);
+}
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* === HAMBURGER BUTTON === */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 22px;
+  position: relative;
+  z-index: 1200;
+}
+.hamburger .bar,
+.hamburger .bar::before,
+.hamburger .bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: all var(--transition-medium);
+}
+.hamburger .bar { top: 50%; transform: translateY(-50%); }
+.hamburger .bar::before { top: -8px; }
+.hamburger .bar::after { top: 8px; }
+
+.hamburger.open .bar { background: transparent; }
+.hamburger.open .bar::before {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.open .bar::after {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* === MOBILE MENU FULLSCREEN === */
+.mobile-menu {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform var(--transition-medium);
+  will-change: transform;
+  z-index: 1100;
+  padding: 80px 28px 28px;
+}
+.mobile-menu.open { transform: translateX(0); }
+
+.mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu a {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: color var(--transition-fast);
+}
+.mobile-menu a:hover { color: var(--color-text-hover); }
+
+/* CTA ichida */
+.mobile-cta {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+.mobile-cta a {
+  display: block;
+  text-align: center;
+}
+
+/* === BODY LOCK === */
+body.menu-open { overflow: hidden; }
+
+/* === RESPONSIVE === */
+.desktop-only { display: inline-block; }
+@media (max-width: 992px) {
+  .nav-links { display: none; }
+  .desktop-only { display: none; }
+  .hamburger { display: block; }
+}
+
+
+
+
+
+
+/* Minimalistic Batavia-style Footer */
+/* filepath: c:\Users\MSI Stealth\OneDrive\Рабочий стол\skyset\about.css */
+.batavia-footer {
+  background: #151515;
+  color: #fff;
+  padding: 0 0 32px 0;
+  font-family: 'Lato', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.batavia-footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px 32px 0 32px;
+  flex-wrap: wrap;
+}
+.footer-col {
+  min-width: 180px;
+  flex: 1 1 0;
+}
+.footer-title {
+  display: block;
+  color: #bdbdbd;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col ul li {
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.footer-col ul li:hover {
+  color: #fff;
+}
+.subscribe-col .subscribe-form {
+  display: flex;
+  margin-top: 12px;
+}
+.subscribe-form input[type="email"] {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #333;
+  background: #181818;
+  color: #fff;
+  border-radius: 0;
+  outline: none;
+  font-size: 1rem;
+}
+.subscribe-form button {
+  padding: 8px 18px;
+  border: none;
+  background: #fff;
+  color: #151515;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.subscribe-form button:hover {
+  background: #222;
+  color: #fff;
+}
+.batavia-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 32px 0 32px;
+  color: #bdbdbd;
+  font-size: 0.98rem;
+}
+.batavia-footer-brand {
+  font-family: 'Georgia', serif;
+  font-size: 8vw;
+  color: #fff;
+  opacity: 0.08;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  margin-top: 24px;
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+@media (max-width: 900px) {
+  .batavia-footer-top {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 16px 0 16px;
+  }
+  .batavia-footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px 16px 0 16px;
+  }
+  .batavia-footer-brand {
+    font-size: 14vw;
+  }
+}
